@@ -1,0 +1,30 @@
+{
+  "name": "check-visa",
+  "description": "German National Visa status check for German Embassy in Moscow",
+  "version": "1.0.0",
+  "keywords": [
+    "visa", "moscow", "germany"
+  ],
+  "repository": "agudulin/check-visa",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "fs": "0.0.2",
+    "path": "^0.12.7",
+    "pdf-text": "^0.4.0",
+    "request": "^2.65.0"
+  },
+  "devDependencies": {
+    "babel": "^5.5.6",
+    "mocha": "^2.2.5"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "mocha --require babel/register",
+    "transpile": "babel --stage 0 ./src -d ./dist",
+    "prepush": "npm test",
+    "prepublish": "npm run transpile",
+    "postpublish": "rm -rf ./dist"
+  },
+  "author": "Alexander Gudulin <alexandr.gudulin@gmail.com> (http://gudulin.com)",
+  "license": "MIT"
+}
