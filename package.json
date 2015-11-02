@@ -1,7 +1,7 @@
 {
   "name": "check-visa",
   "description": "German National Visa status check for German Embassy in Moscow",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "keywords": [
     "visa",
     "moscow",
