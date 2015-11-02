@@ -22,7 +22,7 @@ function requestPageWithPdfLink(callback, results) {
   });
 }
 
-function getPdfLink() {
+export function getPdfLink() {
   return new Promise((resolve, reject) => {
     async.retry({ times: 3, interval: 200 }, requestPageWithPdfLink, (err, result) => {
       if (err) {
@@ -33,7 +33,7 @@ function getPdfLink() {
   });
 }
 
-function getPdfFile(linkToFile) {
+export function getPdfFile(linkToFile) {
   return new Promise((resolve, reject) => {
     request
       .get(linkToFile)
@@ -43,4 +43,3 @@ function getPdfFile(linkToFile) {
   });
 }
 
-export default { getPdfLink, getPdfFile }
