@@ -14,7 +14,7 @@ npm install --save check-visa
 var check = require('check-visa');
 
 const personalBarcode = '1234567';
-check(personalBarcode).then(console.log); // true
+check(personalBarcode).then(console.log); // { pdfLink: ..., result: true }
 ```
 
 ## License
